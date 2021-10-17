@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".MainActivity">
-    
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,6 +29,7 @@
             android:id="@+id/add"
             android:layout_weight="1"
             android:text="Add"
+            android:layout_marginEnd="5dp"
             />
         <Button
             android:layout_width="wrap_content"
@@ -36,6 +37,7 @@
             android:id="@+id/reset"
             android:layout_weight="1"
             android:text="Reset"
+            android:layout_marginStart="5dp"
             />
     </LinearLayout>
 
