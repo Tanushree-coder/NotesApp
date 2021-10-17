@@ -32,6 +32,13 @@ public class MainActivity extends AppCompatActivity {
         btn_reset=findViewById(R.id.reset);
         recyclerView=findViewById(R.id.recyclerView);
 
+        database=RoomDB.getInstance(this);
+        dataList=database.mainDao().getAll();
+        linearLayoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        adapter=new MainAdapter(MainActivity.this,dataList);
+        recyclerView.setAdapter(adapter);
+        
 
     }
 }

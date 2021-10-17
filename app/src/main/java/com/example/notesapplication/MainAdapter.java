@@ -80,7 +80,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
                 dataList.remove(position);
                 notifyItemRemoved(position);
                 notifyItemRangeChanged(position,dataList.size());
-                
+
             }
         });
     }
