@@ -1,6 +1,7 @@
 package com.example.notesapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
 
     List<MainData> dataList = new ArrayList<>();
+    LinearLayoutManager linearLayoutManager;
+    RoomDB database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
