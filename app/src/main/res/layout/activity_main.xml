@@ -7,23 +7,15 @@
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".MainActivity">
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edit_text"
+    
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter a note..."
+        android:id="@+id/edit_text"
+        android:hint="Enter note..."
         android:padding="12dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
+        android:gravity="top"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
