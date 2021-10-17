@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -38,7 +39,33 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(linearLayoutManager);
         adapter=new MainAdapter(MainActivity.this,dataList);
         recyclerView.setAdapter(adapter);
-        
 
+        btn_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String sText=editText.getText().toString().trim();
+                if(!sText.equals(""))
+                {
+                    MainData data=new MainData();
+                    data.setText(sText);
+                    database.mainDao().insert(data);
+                    editText.setText("");
+                    dataList.clear();
+                    dataList.addAll(database.mainDao().getAll());
+                    adapter.notifyDataSetChanged();
+                }
+            }
+        });
+
+        btn_reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                database.mainDao().reset(dataList);
+                dataList.clear();
+                dataList.addAll(database.mainDao().getAll());
+                adapter.notifyDataSetChanged();
+
+            }
+        });
     }
 }
