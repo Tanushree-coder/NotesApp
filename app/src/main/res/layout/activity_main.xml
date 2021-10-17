@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
+    android:background="#bde0fe"
     tools:context=".MainActivity">
 
     <EditText
@@ -13,6 +14,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/edit_text"
         android:hint="Enter note..."
+        android:lines="2"
         android:padding="12dp"
         android:gravity="top"
         />

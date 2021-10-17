@@ -11,7 +11,7 @@
         android:id="@+id/edit_text"
         android:hint="Enter note..."
         android:padding="12dp"
-        android:lines="4"
+        android:lines="2"
         android:gravity="top"
         />
 
